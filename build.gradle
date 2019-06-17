@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+}
+
+group 'apex'
+version '1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+test {
+    afterSuite { desc, result ->
+    if (!desc.parent)
+        println("${result.resultType} " +
+            "(${result.testCount} tests, " +
+            "${result.successfulTestCount} successes, " +
+            "${result.failedTestCount} failures, " +
+            "${result.skippedTestCount} skipped)")
+    }
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'application.MainApplication'
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile "org.mockito:mockito-core:2.+"
+}
