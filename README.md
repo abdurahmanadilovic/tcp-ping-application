@@ -7,7 +7,7 @@ gradle assemble
 java -jar build/libs/tcpPing-1.0.jar
 ```
 
-To run the app without gradle
+To run the app without gradle (packaged binary beforehand)
 ```sh
 java -jar build/libs/tcpPing-1.0.jar
 ```
