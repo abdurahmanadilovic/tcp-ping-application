@@ -10,7 +10,7 @@ public class ApplicationArguments {
     private boolean argumentsAreValid = true;
     public static final int minimumMessageSize = 50;
     public static final int maximumMessageSize = 2000;
-    public static final String defaultTimeFormat = "H:m:s:S";
+    public static final String defaultTimeFormat = "hh:mm:ss";
 
     public void parseArguments(String[] args) {
         try {
